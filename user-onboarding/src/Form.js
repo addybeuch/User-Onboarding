@@ -60,7 +60,7 @@ export default function Form(props) {
                     value={values.terms}
                     onChange={onChange}
                     name='terms'
-                    type='text'
+                    type='checkbox'
                 />               
             </label>
           </div>
