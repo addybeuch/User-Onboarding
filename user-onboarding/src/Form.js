@@ -14,11 +14,11 @@ export default function Form(props) {
     }
 
     return (
-        <form className='form-container' on Submit={onSubmit}>
+        <form className='form-container' onSubmit={onSubmit}>
         <div className='form-group submit'>
             <h2>New User Form</h2>
         
-            <button disabled={disabled}>submit</button>
+
 
             <div className='errors'>
                 <div>{errors.name}</div>
@@ -63,6 +63,9 @@ export default function Form(props) {
                     type='checkbox'
                 />               
             </label>
+
+            <button onSubmit={onSubmit} disabled={disabled}>submit</button>
+
           </div>
         </form>
     )

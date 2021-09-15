@@ -31,7 +31,7 @@ export default function App() {
   const getUsers = () => {
     axios.get('https://reqres.in/api/users')
       .then(res => {
-        setFriends(res.data);
+        setUsers(res.data);
       }).catch(err => console.error(err))
   }
   const postNewUser= newUser => {
@@ -65,13 +65,13 @@ export default function App() {
     }
     postNewUser(newUser);
   }
-  useEffect(() => {
-    getUsers()
-  }, [])
+  // useEffect(() => {
+  //   getUsers()
+  // }, [])
   useEffect(() => {
     schema.isValid(formValues).then(valid => setDisabled(!valid))
-  }, [])
-
+  }, [formValues])
+console.log(users)
   return (
     <div className='container'>
       <h1>New User Information</h1>
@@ -84,9 +84,9 @@ export default function App() {
       />
 
       {
-        users.map(user => {
+        users?.map(user => {
           return (
-            <User key={user.id} details={friend} />
+            <User key={user.id} details={user} />
           )
         })
       }
