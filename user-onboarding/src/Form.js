@@ -28,7 +28,7 @@ export default function Form(props) {
             </div>
         </div>
         <div className='form inputs'>
-            <label>Name
+            <label className='name'> Name &nbsp;
                 <input
                     value={values.name}
                     onChange={onChange}
@@ -37,7 +37,7 @@ export default function Form(props) {
                 />
             </label>
 
-            <label>Email
+            <label className='email'> Email &nbsp;
                 <input
                     value={values.email}
                     onChange={onChange}
@@ -46,7 +46,7 @@ export default function Form(props) {
                 />
             </label>
 
-            <label>Password
+            <label className='password'> Password &nbsp;
                 <input type='password'
                     value={values.password}
                     onChange={onChange}
@@ -55,7 +55,7 @@ export default function Form(props) {
                 />               
             </label>
 
-            <label>Terms
+            <label className='terms'>Terms &nbsp;
                 <input
                     value={values.terms}
                     onChange={onChange}
@@ -65,7 +65,7 @@ export default function Form(props) {
             </label>
 
             <button id='submitBtn' onSubmit={onSubmit} disabled={disabled}>submit</button>
-
+            <footer>Beenza Company</footer>
           </div>
         </form>
     )
